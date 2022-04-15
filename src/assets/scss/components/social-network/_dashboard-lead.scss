@@ -1,0 +1,56 @@
+@import "../../variables/variables";
+
+
+
+#ci-source-tabs{
+    .border-bottom-vertical-tab{
+        border-bottom: 1px $theme-light-border-color solid !important;
+    }
+    .border-right-vertical-tab{
+        border-right: 1px $theme-light-border-color solid !important;
+        padding-right: 30px !important;
+        padding-top: 10px !important;
+    }  
+} 
+#ci-vertical-tabs {
+    .nav-item .nav-link::after {
+      background: white !important;
+    }
+  }  
+
+
+  
+.label-address{
+    max-width: 271px !important;
+}
+.street-address-vue-google{
+    @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    { 
+        margin-left: -49px !important;
+    }
+    @media screen   
+    and (min-device-width: 360px)   
+    and (max-device-width: 640px)
+    {
+        margin-left: 0px !important;
+    }
+}     
+
+
+.dark-layout{
+    #ci-source-tabs{
+        .border-bottom-vertical-tab{
+            border-bottom: 1px $theme-dark-border-color solid !important;
+        } 
+        .border-right-vertical-tab{
+            border-right: 1px $theme-dark-border-color solid !important
+        }  
+    }
+    #ci-vertical-tabs {
+        .nav-item .nav-link::after {
+          background: $theme-dark-card-bg !important;
+        }
+      }    
+}

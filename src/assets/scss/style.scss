@@ -1,0 +1,438 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+$borderamg: #efb911;
+@import "components/card";
+@import "components/kendo";
+@import "components/vue-tree";
+@import "components/form-wizard";
+@import "components/messages";
+@import "components/social-network/dashboard-lead";
+@import "variables/new-colors";
+@import "variables/variables";
+.client-status {
+  // height: 10px;
+  // width: 10px;
+  border-radius: 50%;
+  // left: 0;
+  // top: 22px;
+  // transform: translate(0, -50%);
+}
+.client-status-hold1 {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid #ffc107;
+}
+
+.pac-container {
+  z-index: 100000000 !important;
+}
+
+//buttons utilities
+
+.button-size {
+  height: 23px;
+  padding: 3px;
+}
+
+.button-margin-l {
+  margin-left: 3px;
+}
+
+.footer-black {
+  background: #0e1d44 !important;
+  color: #fff !important;
+  padding: 17px !important;
+}
+
+.footer-span {
+  color: #0e1d44;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.w-50 {
+  width: 16% !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.button-little-size {
+  height: 23px;
+  padding: 3px;
+  .b-icon {
+    vertical-align: initial !important;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.textarea-style {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.restart-font-size {
+  font-size: 100% !important;
+}
+
+.uploader {
+  width: 100%;
+  background: #d2d4d3;
+  padding: 40px 15px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  font-size: 20px;
+  position: relative;
+  &.dragging {
+    background: #fff;
+    color: #2196f3;
+    border: 3px dashed #2196f3;
+    .file-input label {
+      background: #2196f3;
+      color: #fff;
+    }
+  }
+  i {
+    font-size: 85px;
+  }
+  .file-input {
+    width: 200px;
+    margin: auto;
+    height: 68px;
+    position: relative;
+    label,
+    input {
+      background: $borderamg;
+      color: #fff;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 3px;
+      border-radius: 4px;
+      margin-top: 7px;
+      cursor: pointer;
+      height: 32px;
+      font-size: 15px;
+    }
+    input {
+      opacity: 0;
+      z-index: -2;
+    }
+  }
+  .images-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    .img-wrapper {
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      justify-content: space-between;
+      background: #fff;
+      align-items: center;
+      position: relative;
+      img {
+        width: 60%;
+      }
+    }
+    .details {
+      font-size: 12px;
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3px 6px;
+      .name {
+        overflow: hidden;
+        height: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+  .upload-control {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 10px;
+    padding-bottom: 4px;
+    text-align: right;
+    button,
+    label {
+      background: #2196f3;
+      border: 2px solid #03a9f4;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    label {
+      padding: 2px 5px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+//Modal XMD
+
+.modal .modal-xmd {
+  min-width: 65vw;
+  width: 100%;
+}
+.modal .modal-xlg {
+  min-width: 80vw;
+  width: 100%;
+}
+
+.nav-pills {
+  gap: 1rem;
+  .active {
+    border: 1px solid transparent !important;
+  }
+}
+
+//Button x
+.x-close-position {
+  transform: translate(-12px, 4px) !important;
+}
+.hover-primary,
+.hover-important,
+.nav-dark-tabs,
+.nav-light-tabs {
+  transition: 0.3s;
+}
+.hover-primary:hover {
+  background: #3764ff;
+  border-color: #3764ff !important;
+  color: #fff !important;
+}
+.hover-important:hover {
+  background: #ff0a36;
+  border-color: #ff0a36 !important;
+  color: #fff !important;
+}
+
+.border-primary-i {
+  border-color: #3764ff !important;
+}
+.border-important {
+  border-color: #ff3d60 !important;
+}
+
+.box-shadow-important {
+  box-shadow: 0 4px 8px 0 rgba($important, 0.12), 0 2px 4px 0 rgba($important, 0.08) !important;
+}
+
+:root{
+  --scroll-light: rgba(0, 0, 0, 0.30);
+  --scroll-dark: rgba(255, 255, 255, 0.15);
+  &.dark{
+    --scroll-light: var(--scroll-dark);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 5px solid transparent;
+  background-color: var(--scroll-light);
+}
+
+:root {
+  scrollbar-color: var(--scroll-light) transparent;
+  scrollbar-width: auto;
+}
+
+// html.dark::-webkit-scrollbar {
+//   width: 8px;
+// }
+
+// html.dark::-webkit-scrollbar-track {
+//   background-color: rgba(255, 255, 255, 0.50);
+//   border-radius: 100px;
+// }
+
+// html.dark::-webkit-scrollbar-thumb {
+//   border-radius: 100px;
+//   border: 5px solid transparent;
+//   background-color: rgba(255, 255, 255, 0.212);
+// }
+
+// html.dark{
+// scrollbar-color: #d4aa70 #e4e4e4;
+//   scrollbar-width: thin;
+// }
+@media (max-width: 991.98px) {
+  .messages-application {
+    .sidebar-left {
+      position: initial !important;
+    }
+  }
+  [data-col="1-column"] {
+    .head-navbar {
+      &.floating-nav {
+        width: calc(100vw - (100vw - 100%) - calc(2rem * 1)) !important;
+      }
+    }
+  }
+}
+
+.k-picker-wrap {
+  border-radius: 0.357rem !important;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.1s ease;
+  outline: 0;
+  background: transparent !important;
+  border-color: rgba(146, 151, 165, 0.2) !important;
+}
+
+.nav-pills .nav-link {
+  border-radius: 6px 6px 0px 0px;
+}
+.nav-pills .nav-link.active {
+  background-color: #0090e7 !important;
+}
+.nav-pills .nav-link.active.info {
+  background-color: #7032e2 !important;
+}
+
+//navs-tabs
+.nav-dark-tabs {
+  background: #2F2F31;
+}
+.nav-light-tabs {
+  background: #efefef;
+}
+
+.nav-dark-tabs:hover,
+.nav-light-tabs:hover {
+  background: rgba(0, 144, 231, 0.6);
+  color: white;
+}
+.nav-dark-tabs:hover.sub-tab,
+.nav-light-tabs:hover.sub-tab {
+  background: rgba(143, 95, 232, 0.6);
+  color: white;
+}
+
+.border-bottom-tab {
+  border-bottom: 1px solid #3764ff !important;
+}
+
+.table td,
+.table th {
+  vertical-align: top !important;
+}
+
+.nav-pills .nav-link.active {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-table-radius {
+  border-radius: 0px 0px 6px 6px !important;
+}
+.vertical-layout.vertical-menu-modern.menu-collapsed .main-menu:not(.expanded) .navigation li.active a {
+  background: linear-gradient(118deg, #0090e7, rgba(0, 144, 231, 0.7)) !important;
+  color: #fff !important;
+}
+
+// Only for schedules sidebar
+.b-sidebar.sidebar-schedules {
+  width: 40% !important;
+}
+//forms dark
+/* [dir] .dark-layout input.form-control:not(:focus) {
+  border-color: #ffffff !important;
+}
+[dir] .dark-layout .vs__dropdown-toggle {
+  border-color: #ffffff !important;
+}
+
+[dir] .dark-layout textarea.form-control:not(:focus) {
+  border-color: #ffffff;
+} */
+
+// Only for madals of sales made (Initial Payment)
+#crm-sm-modal-initial-payment,
+#crm-sm-modal-contract-fee {
+  .modal-body {
+    padding: 1rem 0rem !important;
+    overflow-x: hidden;
+
+    .margin-0 {
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+  }
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(11px) !important;
+  opacity: 0.80;
+}
+
+
+//header dark without box shadow
+
+
+
+
+.dark-layout{
+  .header-navbar {
+    box-shadow: none !important;
+  }
+  .card {
+    box-shadow: none !important;
+  }
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.80) !important;
+    backdrop-filter: blur(11px) !important;
+  }
+  .col-form-label{
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .input-group .input-group-text{
+    border-color: $theme-dark-input-border-color;
+  }
+  .border-hr{
+    border-color: $theme-dark-input-placeholder-color !important;
+  }
+
+  /* Audio-Notes */
+  .custom-file-label {
+    right: 0;
+    left: 0;
+    background-color: transparent !important;
+}
+}
